@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Cris Eletrônica - circuito1</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/estilo.css" rel="stylesheet">
+
+        </head>
+        <body>
+            <div class= "container-fluid">
+             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.min.js"></script>
+                <div class="row">
+                <header class="masthead">
+                <img class="imgheader" src="imagens/testelogo3.jpg">
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed pull-left " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         <a class="navbar-brand" href="index.html">home</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+              <a href="automacao.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">automação <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="residencial.html">residêncial</a></li>
+                <li><a href="industrial.html">industrial</a></li>
+              </ul>
+              </li>
+                <li class="dropdown">
+              <a href="circuitos.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">circuitos<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="circuito1.html">motor de passo</a></li>
+                <li><a href="circuito2.html">sequencial de leds</a></li>
+                <li><a href="circuito3.html">fonte ajustavel</a></li>
+                <li><a href="circuito4.html">amplificador 50w</a></li>
+              </ul>
+              </li>
+
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">componentes <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="diodo.html">diodos</a></li>
+                <li><a href="transistor.html">transistores</a></li>
+                <li><a href="resistor.html">resistores</a></li>
+                <li><a href="capacitor.html">capacitores</a></li>
+              </ul>
+              </li>
+
+              <li><a href="downloads.html"> downloads </a></li>
+
+            <li class="dropdown">
+              <a href="embarcados.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">embarcados <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="arduino.html">arduino</a></li>
+                <li><a href="raspberry.html">raspberry pi</a></li>
+                <li><a href="photon.html">photon</a></li>
+
+              </ul>
+            </li>
+               <li><a href="historia.html"> história </a></li>
+               <li><a href="instrumentos.html">instrumentos </a></li>
+            </ul>
+              <form class="navbar-form navbar-left">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Pesquisar">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                </div>
+              </form>
+
+        </div>
+      </div>
+      </nav>
+            </header>
+            </div>
+            <article>
+
+                <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <center><h2>Controle de motor de passo</h2></center>
+                </div>
+                </div>
+
+            <div class="row">
+            <div class="row">
+            <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <a href ="#"> <img class="imgitem2" src="imagens/motorpasso.jpg"></a>
+                <center><small>Figura 1</small></center>
+                </section>
+
+            <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <p>Os motores de passo são a base de muitos projetos de automação industrial, robótica, mecatrônica e mesmo que envolvem aplicações de eletrônica de consumo. Justifica-se, portanto a procura por este tipo de circuito que pode aparecer com as mais diversas variações dependendo de fatores como o tipo de motor controlado, potência, etc. O circuito que apresentamos se aplica a motores com correntes de até 1 A aproximadamente, alimentação de 12 V e é controlado por circuitos integrados CMOS.
+                Apresentamos mais uma das muitas configurações possíveis para o controle de um motor de passo utilizando componentes comuns.   Com este circuito podem ser controlados motores de até uns 500 mA com os transistores BD135, de até 1A com transistores TIP31 mas o circuito também aceita Power MOSFETs com a capacidade de trabalhar com correntes ainda maiores.
+                Na versão básica prevemos a utilização de uma chave para determinar o sentido do passo e uma entrada de pulsos que vai determinar tanto o número de passos como a velocidade se for ligado um oscilador.
+                
+                Dois flip-flops do circuito integrado CMOS 4027 controlam os dois enrolamentos com derivação do motor de modo que funcionando em conjunto a sequência de excitação necessária ao movimento seja obtida.
+                As duas saídas dos dois flip-flops (Q e Q/) são ligadas às bases de transistores NPN de potência de modo a saturá-los quando se encontrarem no nível alto.
+                Os transistores devem ter um ganho razoável para permitir a excitação do motor mesmo com as baixas correntes de saída. Sugerimos o uso dos BD135, mas existe a possibilidade de transistores de maior potência serem usados e se forem de baixo ganho pode-se adotar uma etapa Darlington de excitação conforme a mostrada na figura 1 ou mesmo utilizar-se Darlingtons de potência NPN como os TIP140 e outros.
+            </section>
+            </div>
+                <div class="row">
+                <section class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <a href ="imagens/motorpasso2.jpg"> <img class="imgitem2" src="imagens/motorpasso2.jpg"></a>
+                <center><small>Figura 2</small></center>
+
+                </section>
+                <section class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <p>Em paralelo com os enrolamentos dos motores de passo são ligados de diodo para proteger os transistores na comutação, quando devido à carga indutiva pulsos de alta tensão podem ser gerados. Os flip-flops são excitados por uma configuração lógica que tem por base quatro portas Or-Exclusive (OU Exclusivo) CMOS constante do circuito integrado 4070.
+                A ligação destas portas tanto determina a sequência de excitação dos flip-flops quanto o sentido de rotação do motor quando ele recebe pulsos sequenciais.
+                O circuito é alimentado com uma tensão de 12 V, mas ele deve funcionar bem com tensões na faixa de 6 a 15 V.
+                MONTAGEM
+                Na figura 2 temos o diagrama completo do controle de motor de passo que eventualmente pode ser utilizado em conjunto com outros circuitos digitais..</p>
+                </section>
+               </div>
+            </div>
+            </article>
+            <div class="row">
+                <footer>
+                    <div class="row">
+                        <nav>
+                            <ul class="nav-footer col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                                <li><a href="index.html"> home </a></li>
+                                <li><a href="automacao.html"> automação </a></li>
+                                <li><a href="componentes.html"> componentes </a></li>
+                                <li><a href="circuitos.html"> circuitos </a></li>
+
+                            </ul>
+                            <ul class="nav-footer col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                                <li><a href="downloads.html"> downloads </a></li>
+                                <li><a href="embarcados.html"> embarcados </a></li>
+                                <li><a href="historia.html"> história </a></li>
+                                <li><a href="instrumentos.html"> instrumentação </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="row">                                            
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>
+                        <small>Copyright Cristiano Cezar 2017  Todos os direitos reservados
+                        <a href="http://www.fatecsaoroque.edu.br/"/>Fatec São Roque
+                        </small>
+                    </div>
+                    <div  class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a href="https://www.facebook.com/cristianocezar.sobrinho"><img class="face" src="imagens/face.png" alt=" imagem de teste do logo do face "/></a>
+                        <a href="mailto:cristianocezarsobrinho@gmail.com"><img class="email" src="imagens/email.png" alt=" imagem de teste do logo de email "/></a>
+                    </div>
+                    </div>
+                </footer>
+            </div>
+            </div>
+        </body>
+        </html>

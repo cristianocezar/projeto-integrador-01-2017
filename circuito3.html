@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Cris Eletrônica - circuito3</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/estilo.css" rel="stylesheet">
+
+        </head>
+        <body>
+            <div class= "container-fluid">
+             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.min.js"></script>
+                <div class="row">
+                <header class="masthead">
+                <img class="imgheader" src="imagens/testelogo3.jpg">
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed pull-left " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         <a class="navbar-brand" href="index.html">home</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+              <a href="automacao.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">automação <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="residencial.html">residêncial</a></li>
+                <li><a href="industrial.html">industrial</a></li>
+              </ul>
+              </li>
+                <li class="dropdown">
+              <a href="circuitos.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">circuitos<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="circuito1.html">motor de passo</a></li>
+                <li><a href="circuito2.html">sequencial de leds</a></li>
+                <li><a href="circuito3.html">fonte ajustavel</a></li>
+                <li><a href="circuito4.html">amplificador 50w</a></li>
+              </ul>
+              </li>
+
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">componentes <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="diodo.html">diodos</a></li>
+                <li><a href="transistor.html">transistores</a></li>
+                <li><a href="resistor.html">resistores</a></li>
+                <li><a href="capacitor.html">capacitores</a></li>
+              </ul>
+              </li>
+
+              <li><a href="downloads.html"> downloads </a></li>
+
+            <li class="dropdown">
+              <a href="embarcados.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">embarcados <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="arduino.html">arduino</a></li>
+                <li><a href="raspberry.html">raspberry pi</a></li>
+                <li><a href="photon.html">photon</a></li>
+
+              </ul>
+            </li>
+               <li><a href="historia.html"> história </a></li>
+               <li><a href="instrumentos.html">instrumentos </a></li>
+            </ul>
+              <form class="navbar-form navbar-left">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Pesquisar">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                </div>
+              </form>
+
+        </div>
+      </div>
+      </nav>
+            </header>
+            </div>
+            <article>
+
+                <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2><center>Fonte Variável de Bancada</center></h2>
+                </div>
+                </div>
+
+            <div class="row">
+            <section class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <a href ="imagens/fontevariavel.jpg"> <img class="imgitem2" src="imagens/fontevariavel.jpg" alt="foto do esquema eletrico da fonte"></a>
+            <center><small>Figura 1</small></center>    
+            <a href ="imagens/fontevariavelplaca.jpg"> <img class="imgitem2" src="imagens/fontevariavelplaca.jpg" alt="Foto da placa de circuito da fonte"></a>
+            <center><small>Figura 2</small></center>
+
+           
+            </section>
+
+            <section class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                <p> Essa fonte variável tem uma chave rotativa para selecionar as tensões de 1.5, 3, 4, 5, 6 e 9 Volts. E suporta picos de 3A, também conta com proteção interna.</p>
+                <p>Na maioria das vezes essas fontes na realidade não passavam de uma chave com uma sequencia de diodos zeners que regulavam a base de um transistor TIP122  (se eu não me engano) juntamente com dois capacitores e um resistor.  Depois em modelos mais “novos” foi acrescido um circuito integrado 741 e os zeners foram substituídos por resistores.</p>
+                <p>É claro que a tecnologia avança, e com isso as fontes também avançaram,  eu acho que o marco foi o surgimento do circuito integrado LM317. Este circuito eletrônico apresentado aqui é de uma fonte de alimentação regulável, ela usa o circuito integrado LM317 para fazer o ajuste da tensão de saída.</p>
+                <p>Ele não usa nenhum transistor de potência, toda a tensão é regulada diretamente no lm317, isso quer dizer que ele deve ter um dissipador de calor e o limite de corrente é de acordo com a versão do LM317 que é usada, geralmente em média 1,5 A. Essa fonte variável é ideal para iniciantes, já que traz as tensões fixas mais usadas na bancada,  1.5V, 3V, 4.5V, 5V, 6V, 9Volts, e tem proteção contra temperatura e curto (nativos do ci LM317).</p>
+                <p>As tensões são fixas, não é usado potenciômetro, mas sim uma chave seletora rotativa para as tensões de saída, sua corrente máxima para essa versão de LM317 usada pelo criador é 1.5A, o suficiente para quase todos os experimentos e testes em uma bancada. D5 e D6 são diodos 1N4001 e ajudam a proteger ainda mais o IC1 (LM317) de curtos causados por erro no uso da fonte.
+                <p>A fonte variavel liga atravez do interruptor (S1) , o fusível F1 protege o circuito ade qualquer problema antes mesmo do transformador de força, já o transformador T1 tem um secundário de 12 volts por 2 A.  Uma ponte retificadora de diodos (D1-D4)-1N4001 retifica a tensão vinda de T1 e C1 faz a filtragem juntamente com C2 antes do LM317. O LED para mostrar quando existe tensão no circuito, ou seja, quando está ligado,  R1 funciona apenas como limitador de corrente para o Led.</p>
+            </section>
+               
+                </div>
+               
+            </article>
+            <div class="row">
+                <footer>
+                    <div class="row">
+                        <nav>
+                            <ul class="nav-footer col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                                <li><a href="index.html"> home </a></li>
+                                <li><a href="automacao.html"> automação </a></li>
+                                <li><a href="componentes.html"> componentes </a></li>
+                                <li><a href="circuitos.html"> circuitos </a></li>
+
+                            </ul>
+                            <ul class="nav-footer col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                                <li><a href="downloads.html"> downloads </a></li>
+                                <li><a href="embarcados.html"> embarcados </a></li>
+                                <li><a href="historia.html"> história </a></li>
+                                <li><a href="instrumentos.html"> instrumentação </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="row">                                            
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>
+                        <small>Copyright Cristiano Cezar 2017  Todos os direitos reservados
+                        <a href="http://www.fatecsaoroque.edu.br/"/>Fatec São Roque
+                        </small>
+                    </div>
+                    <div  class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <a href="https://www.facebook.com/cristianocezar.sobrinho"><img class="face" src="imagens/face.png" alt=" imagem de teste do logo do face "/></a>
+                        <a href="mailto:cristianocezarsobrinho@gmail.com"><img class="email" src="imagens/email.png" alt=" imagem de teste do logo de email "/></a>
+                    </div>
+                    </div>
+                </footer>
+            </div>
+            </div>
+        </body>
+        </html>
